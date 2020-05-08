@@ -11,18 +11,21 @@ SweetAlert2.initialize = function(config = {}) {
 
 SweetAlert2.Message = {
     success: function (message, config = {}) {
+        if(!message) return;
         Swal.fire(Object.assign({
           icon: 'success',
           title: message,
         }, SweetAlert2.config, config));
     },
     error: function (message, config = {}) {
+        if(!message) return;
         Swal.fire(Object.assign({
           icon: 'error',
           title: message,
         }, SweetAlert2.config, config));
     },
     info: function (message, config = {}, options = '') {
+        if(!message) return;
         Swal.fire(Object.assign({
           icon: 'info',
           title: message + options,
@@ -35,6 +38,7 @@ SweetAlert2.Message = {
         }, SweetAlert2.config, config));
     },
     question: function (message, config = {}) {
+        if(!message) return;
         Swal.fire(Object.assign({
           icon: 'question',
           title: message,
