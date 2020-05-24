@@ -28,7 +28,7 @@ return [
     ],
     'toast' => [
         'xtype' => 'combo-boolean',
-        'value' => false,
+        'value' => true,
         'area' => 'swal2_main',
     ],
 ];
