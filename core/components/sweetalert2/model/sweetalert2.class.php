@@ -68,6 +68,7 @@ class SweetAlert2
             'ajaxform' => (boolean)$this->modx->getOption('swal2_ajaxform'),
             'minishop2' => (boolean)$this->modx->getOption('swal2_minishop2'),
             'office' => (boolean)$this->modx->getOption('swal2_office'),
+            'msoneclick' => (boolean)$this->modx->getOption('swal2_msoneclick'),
         );
         $script = "<script>document.addEventListener('DOMContentLoaded', function(){ SweetAlert2.initialize(" . json_encode($config, true) ."," . json_encode($packages, true) . ") })</script>";
         $this->modx->regClientScript($script); 

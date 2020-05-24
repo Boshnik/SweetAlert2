@@ -14,6 +14,7 @@ $_lang['area_swal2_packages'] = 'Поддержка компонентов';
 $_lang['setting_swal2_ajaxform'] = 'AjaxForm';
 $_lang['setting_swal2_minishop2'] = 'miniShop2';
 $_lang['setting_swal2_office'] = 'Office';
+$_lang['setting_swal2_msoneclick'] = 'msOneClick';
 
 $_lang['area_swal2_frontend'] = 'Фронтенд';
 $_lang['setting_swal2_frontend_css'] = 'Стили фронтенда';

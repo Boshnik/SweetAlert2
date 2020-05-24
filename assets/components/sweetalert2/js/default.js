@@ -13,6 +13,9 @@ SweetAlert2.initialize = function(config = {}, packages = {}) {
     if(packages.office) {
         this.Office();
     }
+    if(packages.msoneclick) {
+        this.msOneClick();
+    }
 
     return true;
 };
@@ -118,5 +121,30 @@ SweetAlert2.Office = function () {
                 SweetAlert2.Message.close();
             }
         };
+    }
+};
+
+SweetAlert2.msOneClick = function () {
+    if (typeof(msOneClick) != 'undefined') {
+        msOneClick.Message = {
+            initialize: function() {
+                msOneClick.Message.close = SweetAlert2.Message.close;
+                msOneClick.Message.show = function(message, options) {
+                    if (message !== '') {
+                        SweetAlert2.Message.info(message, {}, options);
+                    }
+                };
+            },
+            success: function(message) {
+                SweetAlert2.Message.success(message);
+            },
+            error: function(message) {
+                SweetAlert2.Message.error(message);
+            },
+            info: function(message) {
+                SweetAlert2.Message.info(message);
+            }
+        };
+        msOneClick.Message.initialize();
     }
 };

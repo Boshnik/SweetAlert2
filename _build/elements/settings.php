@@ -51,4 +51,9 @@ return [
         'value' => true,
         'area' => 'swal2_packages',
     ],
+    'msoneclick' => [
+        'xtype' => 'combo-boolean',
+        'value' => true,
+        'area' => 'swal2_packages',
+    ],
 ];
