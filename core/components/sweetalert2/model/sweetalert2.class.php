@@ -48,8 +48,11 @@ class SweetAlert2
                     $script = str_replace('[[+jsUrl]]', $this->config['jsUrl'], $js);
                     if($tpl_js = $this->modx->getoption('boilerplate_tpl_js')) {
                         $script = str_replace('[[+file]]', $script, $tpl_js);
+                        $this->modx->regClientStartupScript($script);
+                    } else {
+                        $this->modx->regClientScript($script);
                     }
-                    $this->modx->regClientStartupScript($script);
+                    
                 }
             }
         }
@@ -59,6 +62,7 @@ class SweetAlert2
             'timer' => (int)$this->modx->getOption('swal2_timer'),
             'showConfirmButton' => (boolean)$this->modx->getOption('swal2_showconfirmbutton'),
             'toast' => (boolean)$this->modx->getOption('swal2_toast'),
+            'width' => $this->modx->getOption('swal2_width', [], '32rem', true),
         );
         $script = "<script>document.addEventListener('DOMContentLoaded', function(){ SweetAlert2.initialize(" . json_encode($config, true) .") })</script>";
         $this->modx->regClientScript($script); 
