@@ -1,12 +1,19 @@
 var SweetAlert2 = {};
-SweetAlert2.initialize = function(config = {}) {
+SweetAlert2.initialize = function(config = {}, packages = {}) {
     if(typeof(Swal) == 'undefined') return true;
     this.config = config;
-
-    this.AjaxForm();
-    this.miniShop2();
-    this.Office();
+    this.packages = packages;
     
+    if(packages.ajaxform) {
+         this.AjaxForm();
+    }
+    if(packages.minishop2) {
+        this.miniShop2();
+    }
+    if(packages.office) {
+        this.Office();
+    }
+
     return true;
 };
 
@@ -53,25 +60,25 @@ SweetAlert2.Message = {
 
 SweetAlert2.AjaxForm = function() {
     if (typeof(AjaxForm) != 'undefined') {
-		AjaxForm.Message = {
-		    success: function (message, sticky) {
-		        SweetAlert2.Message.success(message);
-		    },
-		    error: function (message, sticky) {
-		        SweetAlert2.Message.error(message);
-		    },
-		    info: function (message, sticky) {
-		        SweetAlert2.Message.info(message);
-		    },
-		    close: function () {
-		        SweetAlert2.Message.close();
-		    }
-		};
-	}
+        AjaxForm.Message = {
+            success: function (message, sticky) {
+                SweetAlert2.Message.success(message);
+            },
+            error: function (message, sticky) {
+                SweetAlert2.Message.error(message);
+            },
+            info: function (message, sticky) {
+                SweetAlert2.Message.info(message);
+            },
+            close: function () {
+                SweetAlert2.Message.close();
+            }
+        };
+    }
 };
 
 SweetAlert2.miniShop2 = function () {
-	if (typeof(miniShop2) != 'undefined') {
+    if (typeof(miniShop2) != 'undefined') {
         miniShop2.Message = {
             initialize: function() {
                 miniShop2.Message.close = SweetAlert2.Message.close;
@@ -82,34 +89,34 @@ SweetAlert2.miniShop2 = function () {
                 };
             },
             success: function(message) {
-            	SweetAlert2.Message.success(message);
+                SweetAlert2.Message.success(message);
             },
             error: function(message) {
-            	SweetAlert2.Message.error(message);
+                SweetAlert2.Message.error(message);
             },
             info: function(message) {
-            	SweetAlert2.Message.info(message);
+                SweetAlert2.Message.info(message);
             }
         };
         miniShop2.Message.initialize();
-	}
+    }
 };
 
 SweetAlert2.Office = function () {
     if (typeof(Office) != 'undefined') {
-		Office.Message = {
-		    success: function (message, sticky) {
-		        SweetAlert2.Message.success(message);
-		    },
-		    error: function (message, sticky) {
-            	SweetAlert2.Message.error(message);
-		    },
-		    info: function (message, sticky) {
-            	SweetAlert2.Message.info(message);
-		    },
-		    close: function () {
+        Office.Message = {
+            success: function (message, sticky) {
+                SweetAlert2.Message.success(message);
+            },
+            error: function (message, sticky) {
+                SweetAlert2.Message.error(message);
+            },
+            info: function (message, sticky) {
+                SweetAlert2.Message.info(message);
+            },
+            close: function () {
                 SweetAlert2.Message.close();
-		    }
-		};
-	}
+            }
+        };
+    }
 };

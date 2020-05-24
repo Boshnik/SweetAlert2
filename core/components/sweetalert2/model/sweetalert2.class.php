@@ -64,7 +64,12 @@ class SweetAlert2
             'toast' => (boolean)$this->modx->getOption('swal2_toast'),
             'width' => $this->modx->getOption('swal2_width', [], '32rem', true),
         );
-        $script = "<script>document.addEventListener('DOMContentLoaded', function(){ SweetAlert2.initialize(" . json_encode($config, true) .") })</script>";
+        $packages = array(
+            'ajaxform' => (boolean)$this->modx->getOption('swal2_ajaxform'),
+            'minishop2' => (boolean)$this->modx->getOption('swal2_minishop2'),
+            'office' => (boolean)$this->modx->getOption('swal2_office'),
+        );
+        $script = "<script>document.addEventListener('DOMContentLoaded', function(){ SweetAlert2.initialize(" . json_encode($config, true) ."," . json_encode($packages, true) . ") })</script>";
         $this->modx->regClientScript($script); 
     }
 

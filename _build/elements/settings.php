@@ -36,4 +36,19 @@ return [
         'value' => '19rem',
         'area' => 'swal2_main',
     ],
+    'ajaxform' => [
+        'xtype' => 'combo-boolean',
+        'value' => true,
+        'area' => 'swal2_packages',
+    ],
+    'minishop2' => [
+        'xtype' => 'combo-boolean',
+        'value' => true,
+        'area' => 'swal2_packages',
+    ],
+    'office' => [
+        'xtype' => 'combo-boolean',
+        'value' => true,
+        'area' => 'swal2_packages',
+    ],
 ];
