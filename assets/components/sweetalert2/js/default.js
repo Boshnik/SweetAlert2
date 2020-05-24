@@ -1,5 +1,6 @@
 var SweetAlert2 = {};
 SweetAlert2.initialize = function(config = {}) {
+    if(typeof(Swal) == 'undefined') return true;
     this.config = config;
 
     this.AjaxForm();
