@@ -31,4 +31,9 @@ return [
         'value' => true,
         'area' => 'swal2_main',
     ],
+    'width' => [
+        'xtype' => 'textfield',
+        'value' => '19rem',
+        'area' => 'swal2_main',
+    ],
 ];
