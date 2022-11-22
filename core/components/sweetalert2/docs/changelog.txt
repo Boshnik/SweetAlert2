@@ -1,13 +1,17 @@
 List of changes
 
+1.0.3-pl (22.11.2022)
+==============
+- changed JS library sweetalert2 to sweetalert2-neutral v11.4.24-NEUTRAL
+
 1.0.2-pl (24.05.2020)
 ==============
- - swal2_toast system setting value changed to true
- - added system setting swal2_width
- - script registration fixed
- - fixed bug when SweetAlert2 script did not load
- - added system settings to initialize the corresponding component
- - added support for msOneClick
+- swal2_toast system setting value changed to true
+- added system setting swal2_width
+- script registration fixed
+- fixed bug when SweetAlert2 script did not load
+- added system settings to initialize the corresponding component
+- added support for msOneClick
 
 1.0.1-pl (08.05.2020)
 ==============
