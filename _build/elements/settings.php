@@ -8,7 +8,7 @@ return [
     ],
     'frontend_js' => [
         'xtype' => 'textfield',
-        'value' => '//cdn.jsdelivr.net/npm/sweetalert2@9,[[+jsUrl]]default.min.js',
+        'value' => '[[+jsUrl]]sweetalert2.all.min.js,[[+jsUrl]]default.min.js',
         'area' => 'swal2_frontend',
     ],
     'position' => [
